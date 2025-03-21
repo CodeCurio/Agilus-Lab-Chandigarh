@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="./images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Health Packages - Agilus Lab</title>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <a href="index.html">
+        <img src="./images/logo.png" alt="Agilus Lab Logo">
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="packages.html">Packages</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </nav>
+  ...
+
+    <div class="packages-hero">
+        <h1>Health Packages</h1>
+        <p>Comprehensive health screening packages tailored to your needs</p>
+    </div>
+
+    <div class="packages-container">
+        <div class="package-card">
+            <div class="package-header">
+                <h2>Basic Health Check</h2>
+                <div class="price">₹999</div>
+            </div>
+            <div class="package-content">
+                <ul>
+                    <li><i class="fas fa-check"></i> Complete Blood Count</li>
+                    <li><i class="fas fa-check"></i> Blood Sugar Test</li>
+                    <li><i class="fas fa-check"></i> Lipid Profile</li>
+                    <li><i class="fas fa-check"></i> Liver Function Test</li>
+                    <li><i class="fas fa-check"></i> Kidney Function Test</li>
+                </ul>
+                <button class="package-btn">Book Now</button>
+            </div>
+        </div>
+
+        <div class="package-card featured">
+            <div class="package-header">
+                <span class="featured-tag">Most Popular</span>
+                <h2>Comprehensive Health Check</h2>
+                <div class="price">₹2499</div>
+            </div>
+            <div class="package-content">
+                <ul>
+                    <li><i class="fas fa-check"></i> All Basic Health Check Tests</li>
+                    <li><i class="fas fa-check"></i> Thyroid Profile</li>
+                    <li><i class="fas fa-check"></i> Vitamin D & B12</li>
+                    <li><i class="fas fa-check"></i> HbA1c</li>
+                    <li><i class="fas fa-check"></i> Urine Analysis</li>
+                    <li><i class="fas fa-check"></i> ECG</li>
+                    <li><i class="fas fa-check"></i> Doctor Consultation</li>
+                </ul>
+                <button class="package-btn">Book Now</button>
+            </div>
+        </div>
+
+        <div class="package-card">
+            <div class="package-header">
+                <h2>Executive Health Check</h2>
+                <div class="price">₹4999</div>
+            </div>
+            <div class="package-content">
+                <ul>
+                    <li><i class="fas fa-check"></i> All Comprehensive Tests</li>
+                    <li><i class="fas fa-check"></i> Cancer Markers</li>
+                    <li><i class="fas fa-check"></i> Hormone Analysis</li>
+                    <li><i class="fas fa-check"></i> Chest X-Ray</li>
+                    <li><i class="fas fa-check"></i> Ultrasound Abdomen</li>
+                    <li><i class="fas fa-check"></i> Bone Density Test</li>
+                    <li><i class="fas fa-check"></i> Detailed Health Report</li>
+                    <li><i class="fas fa-check"></i> Follow-up Consultation</li>
+                </ul>
+                <button class="package-btn">Book Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="package-features">
+        <h2>Why Choose Our Health Packages?</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <i class="fas fa-flask"></i>
+                <h3>Advanced Technology</h3>
+                <p>State-of-the-art equipment for accurate results</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-user-md"></i>
+                <h3>Expert Team</h3>
+                <p>Qualified healthcare professionals</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-clock"></i>
+                <h3>Quick Results</h3>
+                <p>Fast turnaround time for test results</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-heart"></i>
+                <h3>Personalized Care</h3>
+                <p>Customized health solutions</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="package-cta">
+        <h2>Need a Custom Package?</h2>
+        <p>We can create a personalized health package based on your specific requirements</p>
+        <button class="cta-btn">Contact Us</button>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <h2>© 2023 Agilus Lab. All rights reserved.</h2>
+            <div class="footer-right">
+                <h2>Privacy Policy</h2>
+                <h2>Terms & Conditions</h2>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add this JavaScript for mobile menu functionality
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (event) => {
+            const isClickInside = navLinks.contains(event.target) || hamburger.contains(event.target);
+            if (!isClickInside) {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+    </script>
+   
+</body>
+</html>

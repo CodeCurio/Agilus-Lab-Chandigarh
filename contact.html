@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Agilus Lab Chandigarh - Contact Us</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="index.html">
+          <img src="./images/logo.png" alt="Agilus Lab Logo">
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
+    ...
+    <div class="contact-container">
+      <div class="container1">
+        <h1>Agilus Lab Chandigarh</h1>
+        <p id="boldpara">Connect with us, we would love to hear from you!</p>
+        <p>At SRL Lab Mohali, we understand the importance of convenience and reliability when it comes to healthcare. That’s why we offer home collection services across the Tricity area (Chandigarh, Mohali, and Panchkula), bringing high-quality diagnostic tests right to your doorstep. Whether you need routine blood tests, specialized screenings, or urgent lab work, our team of professional phlebotomists ensures a hassle-free and accurate service in the comfort of your home</p>
+        <div class="email"><i class="ri-mail-check-fill"></i><h3>contact@agiluslab.com</h3></div>
+        <div class="phone"><i class="ri-phone-fill"></i><h3>9115459115</h3></div>
+        <div class="address"><i class="ri-map-pin-2-fill"></i>Booth No 29, Phase 3B2, Phase 3B-2, Sector 59, Sahibzada Ajit Singh Nagar, Punjab 160059</div>
+      </div>
+      <div class="container2">
+        <form>
+          <input type="email" cid="email" placeholder="Type Your Email Here" required/>
+          <input type="tel" id="phone" placeholder="Type Your Number" required/>
+          <input
+            type="text"
+            id="message"
+            placeholder="Please Write Your Message"
+            required
+          />
+          <button onclick="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-left">
+        <h2>@2025 Copyright | Agilus Lab Chandigarh</h2>
+      </div>
+      <div class="footer-right">
+        <h2>Terms of Services</h2>
+        <h2>Privacy Policy</h2>
+      </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="navbar.js"></script>
+    <script>
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active');
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', (event) => {
+        const isClickInside = navLinks.contains(event.target) || hamburger.contains(event.target);
+        if (!isClickInside) {
+          navLinks.classList.remove('active');
+          hamburger.classList.remove('active');
+        }
+      });
+    </script>
+  </body>
+</html>
