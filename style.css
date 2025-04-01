@@ -158,6 +158,62 @@ body {
 .wcus-right p {
   margin-bottom: 1.2rem;
 }
+/* Footer */
+.modern-footer{
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(5, 36, 85, 0.995);
+  color: white;
+}
+.footer-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
+}
+.footer-logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: none;
+  border-radius: 1px;
+}
+.footer-container p{
+  font-size: 15px;
+  width: 100%;
+}
+.footer-logo img{
+  width: 15rem;
+}
+.footer-bottom{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0px;
+}
+.footer-section h3{
+  font-size: 1.5rem;
+}
+.footer-section ul li{
+  text-align: start;
+  text-decoration: none;
+  list-style: none;
+}
+
+.footer-section a{
+  color: white;
+  text-decoration: none;
+}
+.footer-links a{
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+.contactfooter{
+  margin-bottom: 2rem;
+}
 
 .contact-container {
   display: flex;
