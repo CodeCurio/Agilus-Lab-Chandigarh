@@ -167,9 +167,11 @@ body {
 }
 .footer-container{
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   padding: 20px 50px;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 .footer-logo{
   display: flex;
@@ -193,26 +195,125 @@ body {
   justify-content: center;
   padding: 30px 0px;
 }
+.footer-section{
+  flex: 1;
+  min-width: 200px;
+}
 .footer-section h3{
   font-size: 1.5rem;
+  margin-bottom: 15px;
 }
 .footer-section ul li{
   text-align: start;
   text-decoration: none;
   list-style: none;
+  margin-bottom: 8px;
 }
 
 .footer-section a{
   color: white;
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer-section a:hover{
+  color: #46c4f1;
+}
+.footer-links{
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
 }
 .footer-links a{
   color: white;
   text-decoration: none;
   text-align: center;
+  transition: color 0.3s ease;
+}
+.footer-links a:hover{
+  color: #46c4f1;
+}
+.social-icons{
+  display: flex;
+  gap: 15px;
+}
+.social-icons a{
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+.social-icons a:hover{
+  transform: translateY(-3px);
 }
 .contactfooter{
   margin-bottom: 2rem;
+}
+.contactfooter p{
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Footer Responsive Styles */
+@media (max-width: 992px) {
+  .footer-container {
+    padding: 20px 30px;
+    justify-content: space-around;
+  }
+  .footer-section {
+    min-width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 20px 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-section {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .footer-section ul li {
+    text-align: center;
+  }
+  .footer-logo img {
+    width: 12rem;
+  }
+  .contactfooter p {
+    justify-content: center;
+  }
+  .social-icons {
+    justify-content: center;
+  }
+  .footer-bottom {
+    text-align: center;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 20px 15px;
+    gap: 20px;
+  }
+  .footer-section h3 {
+    font-size: 1.3rem;
+  }
+  .footer-logo img {
+    width: 10rem;
+  }
+  .footer-bottom {
+    padding: 20px 15px;
+  }
+  .footer-bottom p {
+    font-size: 0.9rem;
+  }
 }
 
 .contact-container {
